@@ -6,7 +6,7 @@ vm_list = [
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.hostmanager.enabled = true
-  config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "../data", "/vagrant_data", type:"virtualbox"
   # 必要に応じてホストOSの方へゲストOSの情報を追加
   # config.hostmanager.manage_host = true
 
